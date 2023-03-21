@@ -10,7 +10,7 @@ which is readily available and lightweight, instead of using
 the AST information which requires source code to be parsable for an extraction, limiting its ability to perform on-the-fly code completion (see Section 2.3 in our paper). 
 
 The overview of our PyCoder is shown in the figure below. More information can be found in our paper.
-![An overview of our Syntax-Aware On-the-Fly Python Code Completion approach (PyCoder).](https://github.com/awsm-research/pycoder/assets/images/overview.png)
+![An overview of our Syntax-Aware On-the-Fly Python Code Completion approach (PyCoder).](https://github.com/awsm-research/pycoder/blob/main/assets/images/overview.png)
 
 The results of our PyCoder is in `assets/notebooks/results.ipynb`
 

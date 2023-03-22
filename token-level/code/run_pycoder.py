@@ -51,10 +51,6 @@ def set_seed(args):
     if args.n_gpu > 0:
         torch.cuda.manual_seed_all(args.seed)
 
-def update_config(args, config):
-    # config.n_positions = config.n_ctx = args.block_size
-    config.vocab_size = args.vocab_size
-
 def get_special_tokens(path):
     lits = json.load(open(path))
     tokens = ["<STR_LIT>", "<NUM_LIT>", "<CHAR_LIT>"]
@@ -662,7 +658,6 @@ def eval_acc(args, model, tokenizer, token_types, file_type='test'):
 
 def post_process(args, preds, gts, true_gts, saved_file):
     wf = open(saved_file, "w")
-
     cnt = 0
     new_gt = []
     new_pred = []
@@ -676,7 +671,7 @@ def post_process(args, preds, gts, true_gts, saved_file):
             continue
         new_gt.append(gt)
         new_pred.append(pred.replace(" ", ""))
-        if open_tag and gt == "</s>": #"END" or "END" in gt:
+        if open_tag and gt == "</s>": 
             open_tag = False
             gt_str = " ".join(new_gt)
             pred_str = " ".join(new_pred)
@@ -1008,7 +1003,6 @@ def main():
             type_model.resize_token_embeddings(len(tokenizer))
     else:
         tokenizer = tokenizer_class.from_pretrained(args.tokenizer_dir, sep_token='<EOL>', bos_token='<s>', eos_token='</s>', pad_token='<pad>', unk_token='<|UNKNOWN|>', additional_special_tokens=special_tokens)
-        args.vocab_size = len(tokenizer)
         config = config_class.from_pretrained(args.config_dir)
         model = model_class(config)
         model.resize_token_embeddings(len(tokenizer))

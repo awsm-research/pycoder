@@ -173,7 +173,7 @@ python -u run_pycoder_line.py \
 
 Our trained model is available in HuggingFace: [PyCoder](https://huggingface.co/Wannita/PyCoder).
 
-#Todo
+To find the sample usage code, navigate to `assets/notebooks/inference.ipynb` directory.
 
 ## Reference
 

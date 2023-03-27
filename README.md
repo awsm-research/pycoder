@@ -149,8 +149,8 @@ python -u run_pycoder.py \
 LANG=python                      
 DATADIR=../dataset/py150/line_completion
 LITFILE=../dataset/py150/literals.json
-OUTPUTDIR=../../CodeCompletion-token/save/<output_dir> # predictions saved here
-PRETRAINDIR=../../CodeCompletion-token/save/<model_dir>/<checkpoint_file> # directory of your saved model
+OUTPUTDIR=../../line-level/save/<output_dir> # predictions saved here
+PRETRAINDIR=../../line-level/save/<model_dir>/<checkpoint_file> # directory of your saved model
 LOGFILE=<log_dir>.log # log file saved here
 
 python -u run_pycoder_line.py \

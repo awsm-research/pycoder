@@ -40,7 +40,7 @@ We use PY150 in our experiments and follow the data splitting from CodeXGLUE. Da
 | ---------- | :---------: | :----------------------: | :-----------------------: |
 |    Test    |    10,000   |          477.81          |          6.61             |
 
-Our already processed dataset (code + token type dataset) is available in HuggingFace: [PyCoder Dataset](https://huggingface.co/datasets/Wannita/PyCoder/tree/main).
+Our already processed dataset (code + token type dataset) is available in HuggingFace: [PyCoder Code Dataset](https://huggingface.co/datasets/Wannita/PyCoder/tree/main), [PyCoder Token Type Dataset](https://huggingface.co/datasets/Wannita/PyCoder-Type/tree/main).
 
 To download and preprocess the dataset by yourself, navigate to `token-level/dataset/py150` directory, and run
 ```shell

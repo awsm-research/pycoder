@@ -2,7 +2,7 @@
 
 This repository contains the code for the paper [Syntax-Aware On-the-Fly Code Completion](https://arxiv.org/abs/2211.04673)
 
-PyCoder leverage a Multi-Task Training technique (MTT) to cooperatively
+PyCoder leverages a Multi-Task Training technique (MTT) to cooperatively
 learn the code prediction task and the type prediction task. For the type prediction
 task, we propose to leverage the standard Python token
 type information (e.g., String, Number, Name, Keyword),
@@ -149,8 +149,8 @@ python -u run_pycoder.py \
 LANG=python                      
 DATADIR=../dataset/py150/line_completion
 LITFILE=../dataset/py150/literals.json
-OUTPUTDIR=../../CodeCompletion-token/save/<output_dir> # predictions saved here
-PRETRAINDIR=../../CodeCompletion-token/save/<model_dir>/<checkpoint_file> # directory of your saved model
+OUTPUTDIR=../../line-level/save/<output_dir> # predictions saved here
+PRETRAINDIR=../../line-level/save/<model_dir>/<checkpoint_file> # directory of your saved model
 LOGFILE=<log_dir>.log # log file saved here
 
 python -u run_pycoder_line.py \
